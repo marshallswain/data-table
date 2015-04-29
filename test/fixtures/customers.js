@@ -1,3 +1,5 @@
+import 'can/util/fixture/';
+
 export var customers = [
   {
     "favoriteFruit": "banana",
@@ -1584,3 +1586,12 @@ export var customers = [
     "_id": "553f13b447878975492adcab"
   }
 ];
+
+
+can.fixture("api/customers", function (request) {
+  var start = request.data.offset || 0, end = start + (request.data.limit || customers.length);
+  return {
+    count: customers.length,
+    data: customers.slice(start, end)
+  };
+});

@@ -7,18 +7,17 @@
 	</thead>
 
 	<tbody>
-		{{#customers}}
-		<tr>
-		   <td>{{name.first}} {{name.last}}</td>
-		   <td>{{balance}}</td>
-		</tr>
-		{{/customers}}
-	</tbody>
+		{{#if items.isPending}}
+		  <tr><td>Loading</td></tr>
+		{{/if}}
 
-	<tfoot>
-		<tr>
-		   <td>Sum</td>
-		   <td>$180</td>
-		</tr>
-	</tfoot>
+		{{#if items.isResolved}}
+		  {{#items.value}}
+	  		<tr>
+	  		   <td>{{name.first}} {{name.last}}</td>
+	  		   <td>{{balance}}</td>
+	  		</tr>
+  		{{/items.value}}
+		{{/if}}
+	</tbody>
 </table>

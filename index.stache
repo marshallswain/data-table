@@ -1,0 +1,2 @@
+<can-import from="data-table"/>
+<data-table model="{CustModel}" limit="10"> </data-table>
