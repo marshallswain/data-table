@@ -1,2 +1,9 @@
 <can-import from="data-table"/>
-<data-table model="{CustModel}" limit="10"> </data-table>
+<data-table model="{CustModel}"
+	limit="10"
+	headings="Name, Balance"
+	heading-separator=","
+	fields="name.first name.lastmoo balance"
+	field-column-separator="moo"
+	field-separator=" ">
+</data-table>
