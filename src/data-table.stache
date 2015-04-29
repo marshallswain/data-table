@@ -1,8 +1,9 @@
 <table>
 	<thead>
 		<tr>
-		   <th>Name</th>
-		   <th>Balance</th>
+			{{#headings}}
+			<th>{{.}}</th>
+			{{/headings}}
 		</tr>
 	</thead>
 
@@ -12,11 +13,12 @@
 		{{/if}}
 
 		{{#if items.isResolved}}
-		  {{#items.value}}
+		  {{#each items.value}}
+			{{#../fields}}
 	  		<tr>
-	  		   <td>{{name.first}} {{name.last}}</td>
-	  		   <td>{{balance}}</td>
+					<td>{{#buildFields .}}</td>
 	  		</tr>
+			{{/../fields}}
   		{{/items.value}}
 		{{/if}}
 	</tbody>
