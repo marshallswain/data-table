@@ -57,13 +57,13 @@ can.Component.extend({
 	},
 	helpers:{
 		buildFields(fields){
-			var allFields;
-			function index(obj,i) {return obj[i];}
-			for (var i = 0; i < fields.length; i++) {
-				console.log(this);
-				allFields += fields[i].split('.').reduce(index, this) + ' ';
-			}
-			return allFields;
+			// var allFields;
+			// function index(obj,i) {return obj[i];}
+			// for (var i = 0; i < fields.length; i++) {
+			// 	console.log(this);
+			// 	allFields += fields[i].split('.').reduce(index, this) + ' ';
+			// }
+			return fields;
 		}
 	}
 });

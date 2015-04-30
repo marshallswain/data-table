@@ -3,7 +3,11 @@
 	limit="10"
 	headings="Name, Balance"
 	heading-separator=","
+<<<<<<< HEAD
 	fields="name.first name.lastmoo balance"
+=======
+	fields="name.first name.last, balance"
+>>>>>>> 67824f860d45910e4e27c2d1c2cbe466ae3dde11
 	field-column-separator="moo"
 	field-separator=" ">
 </data-table>
